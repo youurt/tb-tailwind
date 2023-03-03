@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import { CardComponent } from '@tb-tailwind/common-ui';
 
 @Component({
@@ -7,5 +7,8 @@ import { CardComponent } from '@tb-tailwind/common-ui';
   standalone: true,
   imports: [CommonModule, CardComponent],
   templateUrl: './main.component.html',
+  styleUrls: ['./main.component.scss'],
 })
-export class MainComponent {}
+export class MainComponent {
+  @HostBinding('class.c-tailwind-main') hostClass = true;
+}

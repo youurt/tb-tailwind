@@ -1,0 +1,19 @@
+/* ==========================================================================
+   MAIN COMPONENT
+
+   - Main Component
+   ========================================================================== */
+
+
+
+
+
+/* Main Component
+   ========================================================================== */
+
+.c-tailwind-main {
+
+  &__wrapper {
+    @apply grid grid-cols-1 gap-md md:grid-cols-2 lg:grid-cols-3; // apply tailwind classes in scss!
+  }
+ }
