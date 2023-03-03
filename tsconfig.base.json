@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@tb-tailwind/common-feature": ["libs/common-feature/src/index.ts"],
       "@tb-tailwind/common-ui": ["libs/common-ui/src/index.ts"]
     }
   },

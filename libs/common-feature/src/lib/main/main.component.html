@@ -1,0 +1,30 @@
+<div class="grid grid-cols-1 gap-md md:grid-cols-2 lg:grid-cols-3">
+  <tb-tailwind-card
+    *ngFor="
+      let item of [
+        {
+          title: 'Angular',
+          route: 'angular',
+          content:
+            'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.'
+        },
+        {
+          title: 'Tailwind CSS',
+          route: 'tailwind',
+          content:
+            'Tailwind CSS is a utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design,directly in your markup.'
+        },
+        {
+          title: 'Nx',
+          route: 'nx',
+          content:
+            'Nx is a smart, fast and extensible build system with first class monorepo support and powerful integrations.'
+        }
+      ]
+    "
+    [title]="item.title"
+    [route]="item.route"
+  >
+    {{ item.content }}
+  </tb-tailwind-card>
+</div>
