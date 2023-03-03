@@ -4,26 +4,26 @@
       let item of [
         {
           title: 'Angular',
-          url: 'https://angular.io/',
+          route: 'angular',
           content:
             'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.'
         },
         {
           title: 'Tailwind CSS',
-          url: 'https://tailwindcss.com/',
+          route: 'tailwindcss',
           content:
             'Tailwind CSS is a utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design,directly in your markup.'
         },
         {
           title: 'Nx',
-          url: 'https://nx.dev/',
+          route: 'nx',
           content:
             'Nx is a smart, fast and extensible build system with first class monorepo support and powerful integrations.'
         }
       ]
     "
     [title]="item.title"
-    [url]="item.url"
+    [route]="item.route"
   >
     {{ item.content }}
   </tb-tailwind-card>
