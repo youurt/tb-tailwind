@@ -3,13 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { CommonUiModule } from '@tb-tailwind/common-ui';
 import { AppComponent } from './app.component';
-import { appRoutes } from './app.routes';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
+    RouterModule.forRoot([
+      { path: '', pathMatch: 'full', redirectTo: 'main' },
+      {
+        path: 'main',
+        loadChildren: () =>
+          import('@tb-tailwind/common-feature').then(
+            (mod) => mod.CommonFeatureModule
+          ),
+      },
+    ]),
     CommonUiModule,
   ],
   providers: [],
